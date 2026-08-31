@@ -1,0 +1,1220 @@
+/* === Font Import for Display Type === */
+@font-face {
+  font-family: "Veneer";
+  src: url("./Veneer.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === CSS Variables: Gorkha Strong Palette === */
+:root {
+  /* base — the black band of the label */
+  --ink: #0c0906;
+  --ink-2: #14100b;
+  --charcoal: #1c1611;
+  --charcoal-2: #241c14;
+
+  /* accents — the gold ring and the amber in the glass */
+  --gold: #e8b74a;
+  --gold-soft: #f2cd7c;
+  --gold-deep: #b8860b;
+  --amber: #f0a93c;
+  --amber-glow: rgba(240, 169, 60, 0.28);
+
+  /* the maroon from the Gorkha crest */
+  --crimson: #8a1c1c;
+
+  /* type */
+  --bone: #f4ecd9;
+  --muted: #a9987b;
+
+  /* hairlines */
+  --rule: rgba(232, 183, 74, 0.28);
+
+  --display: "Veneer", "Georgia", serif;
+  --body: "Inter", system-ui, sans-serif;
+  --deva: "Mukta", "Noto Sans Devanagari", system-ui, sans-serif;
+}
+
+/* === Global Reset === */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Body Styling === */
+body {
+  margin: 0;
+  font-family: var(--body);
+  background-color: var(--ink);
+  color: var(--bone);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Devanagari lockup */
+.np,
+.logo-np {
+  font-family: var(--deva);
+  font-weight: 800;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* === Header Bar === */
+header {
+  position: sticky; /* sticks to top on scroll */
+  top: 0;
+  z-index: 999;
+  background-color: rgba(12, 9, 6, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Bottom border animation (controlled via JS) */
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: var(--border-width);
+  background: linear-gradient(
+    90deg,
+    var(--gold-deep),
+    var(--gold),
+    var(--gold-deep)
+  );
+}
+
+/* Header content layout */
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo lockup */
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.logo-np {
+  font-size: 2rem;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.logo-en {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--bone);
+}
+
+/* Desktop Nav Menu */
+nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+/* Nav Link Styling */
+nav a {
+  font-weight: 600;
+  color: var(--bone);
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Icon (hidden by default) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 26px;
+  height: 2px;
+  background: var(--gold);
+}
+
+/* Mobile Nav Menu */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: var(--charcoal);
+  padding: 1rem 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.mobile-nav a {
+  padding: 0.85rem 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  color: var(--bone);
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  color: var(--gold);
+}
+
+/* === Main Content Wrapper === */
+main {
+  padding-left: 103px; /* space for fixed social sidebar */
+  position: relative;
+  background: var(--ink);
+}
+
+/* === Vertical Social Media Sidebar === */
+.social-sidebar {
+  position: absolute;
+  width: 103px;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  margin: 0 auto;
+  padding: 2rem;
+  height: 100%;
+  background-color: var(--ink);
+}
+
+/* Sidebar right border animation */
+.social-sidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: var(--border-height);
+  width: 1px;
+  background: linear-gradient(180deg, var(--gold), rgba(232, 183, 74, 0.05));
+}
+
+/* Sticky icon stack */
+.social-sidebar nav {
+  position: sticky;
+  top: 8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual Social Icons */
+.social-sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--gold);
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.social-sidebar a:hover {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+  box-shadow: 0 0 18px var(--amber-glow);
+}
+
+.social-sidebar svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* === Responsive Sidebar Behavior for Mobile === */
+@media (max-width: 768px) {
+  main {
+    padding-left: 0;
+  }
+
+  .social-sidebar {
+    position: sticky;
+    top: unset;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(12, 9, 6, 0.92);
+    backdrop-filter: blur(10px);
+  }
+
+  .social-sidebar nav {
+    position: relative;
+    top: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-sidebar::after {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+/* === Closing Section === */
+.outro {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem;
+  border-top: 1px solid var(--rule);
+  background: radial-gradient(
+      ellipse 55% 65% at 50% 50%,
+      rgba(240, 169, 60, 0.12),
+      transparent 70%
+    ),
+    var(--ink);
+  overflow-x: clip;
+}
+
+.outro-inner {
+  max-width: 620px;
+}
+
+.outro .small-title {
+  justify-content: center;
+}
+
+.outro-heading {
+  font-family: var(--deva);
+  font-weight: 800;
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
+  line-height: 1.5;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.outro-sub {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--bone);
+  margin-bottom: 1.5rem;
+}
+
+.outro .description {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 460px;
+}
+
+/* === Footer Section === */
+footer {
+  background: linear-gradient(180deg, var(--charcoal) 0%, var(--ink) 100%);
+  color: var(--bone);
+  padding: 4rem 2rem 2rem;
+  border-top: 1px solid var(--rule);
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.55;
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Logo inside footer */
+.footer-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo .logo-np {
+  font-size: 1.7rem;
+}
+
+.footer-logo .logo-en {
+  font-size: 1.9rem;
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 320px;
+}
+
+.footer-heading {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+/* Link and Contact Groups */
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.4px;
+  color: var(--muted);
+}
+
+.footer-bottom .disclaimer {
+  opacity: 0.65;
+  max-width: 460px;
+}
+
+/* === Responsive Header Behavior === */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-nav.show {
+    display: flex;
+  }
+}
+
+/* === Hero Section === */
+.hero {
+  position: relative;
+  min-height: calc(50rem - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ink);
+  background-image: radial-gradient(
+    ellipse 46% 58% at 50% 46%,
+    rgba(240, 169, 60, 0.16) 0%,
+    rgba(138, 28, 28, 0.1) 42%,
+    transparent 72%
+  );
+  background-size: cover;
+  padding: 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* engraved horizon lines behind the hero type */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgba(232, 183, 74, 0.055) 0px,
+    rgba(232, 183, 74, 0.055) 1px,
+    transparent 1px,
+    transparent 26px
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    #000 12%,
+    transparent 76%
+  );
+  mask-image: radial-gradient(ellipse at center, #000 12%, transparent 76%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Big Heading Animation Target */
+.hero-content h1 {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: clamp(6rem, 16vw, 12rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0.5rem 0;
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--gold);
+  opacity: 0;
+}
+
+.hero-content .line {
+  display: block;
+}
+
+/* Tagline under the wordmark */
+.hero-tagline {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--muted);
+}
+
+.hero-tagline .np {
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  text-transform: none;
+  color: var(--gold);
+}
+
+.hero-tagline .sep {
+  color: var(--gold-deep);
+}
+
+/* Scroll cue */
+.scroll-cue {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--muted);
+}
+
+.scroll-cue i {
+  display: block;
+  width: 1px;
+  height: 42px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  animation: cue 2.2s ease-in-out infinite;
+  transform-origin: top;
+}
+
+@keyframes cue {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* Bottle wrapper for scroll animation */
+.hero-bottle-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 45rem;
+  width: 100%;
+  z-index: 4;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Actual bottle image */
+.hero-bottle {
+  position: absolute;
+  left: 16%; /* nudged off-centre so the wordmark stays readable */
+  right: 0;
+  top: 0;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.7));
+  transform: rotate(20deg);
+  transition: filter 0.3s ease;
+}
+
+/* Amber halo behind the bottle — a cheap radial wash rather than a
+   second drop-shadow, which is expensive to rasterise on every frame. */
+.hero-bottle-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 46%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(240, 169, 60, 0.26) 0%,
+    rgba(240, 169, 60, 0.1) 42%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Hero stamp — the slot owns the position so GSAP only ever touches
+   the image's own rotate/scale. */
+.hero-stamp-slot {
+  position: absolute;
+  left: 1%;
+  top: -30%;
+  z-index: 5;
+  display: block;
+  line-height: 0;
+}
+
+.hero-stamp {
+  display: block;
+  width: 170px;
+  max-width: 40vw;
+  /* scale(9) is plenty for the "slams down" read — scale(100) built a
+     13,000px layer on first paint for no visible benefit. */
+  transform: rotate(-20deg) scale(9);
+  opacity: 0;
+}
+
+/* On desktop the wordmark sits to the left and the bottle owns the right
+   half, so neither one has to read through the other. */
+@media (min-width: 769px) {
+  .hero {
+    justify-content: flex-start;
+    padding-left: 4rem;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-tagline {
+    justify-content: flex-start;
+  }
+
+  .hero-stamp-slot {
+    left: 0;
+    top: -40%;
+  }
+
+  .hero-stamp {
+    width: 130px;
+  }
+
+  .scroll-cue {
+    left: 4rem;
+    align-items: flex-start;
+    transform: none;
+  }
+}
+
+/* === Responsive Hero Section === */
+@media (max-width: 768px) {
+  /* On phones the bottle stops floating and simply stacks above the
+     wordmark, so nothing important sits underneath it. */
+  .hero-bottle-wrapper {
+    position: relative;
+    height: 21rem;
+    padding-top: 2.5rem;
+  }
+
+  .hero-bottle {
+    position: relative;
+    left: auto;
+    right: auto;
+    height: 100%;
+    transform: rotate(8deg);
+  }
+
+  .hero-bottle-wrapper::before {
+    width: 62%;
+  }
+
+  .hero {
+    min-height: 0;
+    padding: 1rem 1.5rem 3.5rem;
+  }
+
+  .hero-stamp-slot {
+    position: relative;
+    left: auto;
+    top: auto;
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-stamp {
+    width: 96px;
+    margin: 0 auto;
+  }
+
+  .hero-content h1 {
+    font-size: 17vw;
+  }
+
+  .hero-tagline {
+    font-size: 0.66rem;
+    letter-spacing: 2.5px;
+    gap: 0.5rem;
+  }
+
+  .scroll-cue {
+    display: none;
+  }
+}
+
+/* === Intro Section (below hero) === */
+.section-intro {
+  background-color: var(--ink);
+  border-top: 1px solid var(--rule);
+  padding: 5rem 2rem;
+  position: relative;
+  z-index: 1;
+  /* keeps the reveal animations' offsets from widening the page */
+  overflow-x: clip;
+}
+
+/* === Intro Section Grid Layout === */
+.intro-grid {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+/* Left and Right Columns in Intro Section */
+.intro-left,
+.intro-right {
+  max-width: 30%;
+}
+
+/* Section Label Above Main Heading */
+.small-title {
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--gold-deep);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.small-title::before {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: var(--gold-deep);
+}
+
+/* Main Heading */
+.main-heading {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: 4.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+/* Intro Paragraph Description */
+.description {
+  font-size: 1.02rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+/* Key numbers row */
+.stat-row {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 2.25rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-value {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--bone);
+}
+
+.stat-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold-deep);
+}
+
+/* Call-to-Action Button */
+.cta-box {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border: 1px solid var(--gold);
+  background-color: var(--gold);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  transition: all 0.3s ease;
+}
+
+.cta-box:hover {
+  background-color: transparent;
+  color: var(--gold);
+  box-shadow: 0 0 24px var(--amber-glow);
+}
+
+/* === Responsive Intro Section === */
+@media (max-width: 768px) {
+  .section-intro {
+    padding: 3rem 1.5rem;
+  }
+
+  .intro-grid {
+    text-align: center;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .intro-left,
+  .intro-right {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .small-title {
+    justify-content: center;
+  }
+
+  .main-heading {
+    font-size: 2.75rem;
+  }
+
+  .stat-row {
+    justify-content: center;
+    gap: 1.75rem;
+  }
+
+  .stat {
+    align-items: center;
+  }
+}
+
+/* === Ingredients Log Container === */
+.ingredients-log {
+  background: transparent;
+  padding: 1rem 0;
+}
+
+/* Ingredients Section Title */
+.ingredients-title {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: 1.9rem;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+/* Single Ingredient Entry Layout */
+.ingredient-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.85rem;
+  padding-bottom: 1.85rem;
+  border-bottom: 1px solid rgba(232, 183, 74, 0.13);
+}
+
+.ingredient-item:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Quantity Value (e.g. 650ml) */
+.ingredient-qty {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: 2.2rem;
+  color: var(--gold-deep);
+  min-width: 110px;
+  text-align: left;
+  line-height: 1;
+}
+
+/* Textual Description of Ingredient */
+.ingredient-text {
+  max-width: 400px;
+}
+
+.ingredient-text strong {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--bone);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.ingredient-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* === Responsive Ingredients Layout === */
+@media (max-width: 768px) {
+  .ingredient-item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .ingredient-qty {
+    font-size: 2rem;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .ingredient-text {
+    max-width: 100%;
+  }
+
+  .ingredients-title {
+    text-align: center;
+    font-size: 2.25rem;
+  }
+}
+
+/* === Marquee Band === */
+.marquee {
+  position: relative;
+  z-index: 6;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    var(--gold-deep),
+    var(--gold),
+    var(--gold-deep)
+  );
+  border-top: 1px solid rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  padding: 0.7rem 0;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: max-content;
+  animation: slide 32s linear infinite;
+}
+
+.marquee-track span {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.marquee-track span.np {
+  font-family: var(--deva);
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.marquee-track i {
+  color: rgba(12, 9, 6, 0.55);
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .scroll-cue i {
+    animation: none;
+  }
+}
+
+/* === Timeline Section === */
+.timeline-section {
+  padding: 6rem 0rem 4rem;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+      ellipse 60% 40% at 80% 8%,
+      rgba(138, 28, 28, 0.16),
+      transparent 70%
+    ),
+    var(--ink);
+}
+
+/* Each Timeline Entry Block */
+.timeline-entry {
+  margin: 0;
+  padding: 0 2rem 0;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  min-height: 600px;
+  max-width: 70%;
+}
+
+/* Alternate Entry Layout (odd/even) */
+.timeline-entry:nth-child(odd) {
+  margin-left: auto;
+}
+
+.timeline-entry:nth-child(odd) .timeline-left {
+  order: 2;
+}
+
+.timeline-entry:nth-child(odd) .timeline-right {
+  order: 1;
+}
+
+.timeline-entry:nth-child(even) {
+  margin-right: auto;
+}
+
+.timeline-entry:last-child {
+  margin-bottom: 0rem;
+}
+
+/* Main Section Title */
+.timeline-main-title {
+  padding: 0 2rem 0rem;
+  font-weight: 100;
+  font-family: var(--display);
+  font-size: clamp(3.5rem, 11vw, 10rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--gold);
+  margin-bottom: 2.5rem;
+}
+
+/* Left Side of Timeline: Year + Image */
+.timeline-left {
+  flex: 0 0 300px;
+  text-align: center;
+}
+
+.timeline-date {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: 4rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  transform: translateY(30px); /* initial offset for animation */
+}
+
+.timeline-img {
+  width: 100%;
+  max-width: 260px;
+  border: 1px solid var(--rule);
+  padding: 0.5rem;
+  background-color: var(--charcoal);
+  box-shadow: 8px 8px 0 rgba(232, 183, 74, 0.22),
+    0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* Right Side of Timeline: Text Content */
+.timeline-right {
+  flex: 1;
+  max-width: 420px;
+}
+
+.timeline-title {
+  font-family: var(--display);
+  font-weight: 100;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--bone);
+  margin-bottom: 1rem;
+}
+
+.timeline-description {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* === Responsive Timeline Section === */
+@media (max-width: 768px) {
+  .timeline-section {
+    padding: 3rem 0rem 3rem;
+  }
+
+  .timeline-main-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-entry {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto 2rem;
+    gap: 1.5rem;
+    max-width: 100%;
+    min-height: unset;
+  }
+
+  .timeline-left {
+    margin-bottom: 1rem;
+    flex: 0 0 auto;
+  }
+
+  .timeline-title {
+    font-size: 1.7rem;
+  }
+
+  .timeline-date {
+    font-size: 3rem;
+  }
+
+  .timeline-entry:nth-child(odd) .timeline-right {
+    order: 2;
+  }
+}
+
+/* === Footer responsive === */
+@media (max-width: 768px) {
+  footer {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

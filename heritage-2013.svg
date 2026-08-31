@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img" aria-label="Gorkha Strong, launched 2013">
+  <defs>
+    <linearGradient id="glass13" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6b3f0d"/>
+      <stop offset="0.3" stop-color="#e8a83a"/>
+      <stop offset="0.6" stop-color="#b5701c"/>
+      <stop offset="1" stop-color="#5a3208"/>
+    </linearGradient>
+    <linearGradient id="bg13" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#251708"/>
+      <stop offset="1" stop-color="#110a04"/>
+    </linearGradient>
+    <g id="barley13">
+      <path d="M0 0 v-84" stroke="#e8b74a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <g fill="#e8b74a">
+        <ellipse cx="-8" cy="-24" rx="5" ry="10" transform="rotate(-22 -8 -24)"/>
+        <ellipse cx="8" cy="-32" rx="5" ry="10" transform="rotate(22 8 -32)"/>
+        <ellipse cx="-8" cy="-42" rx="5" ry="10" transform="rotate(-22 -8 -42)"/>
+        <ellipse cx="8" cy="-50" rx="5" ry="10" transform="rotate(22 8 -50)"/>
+        <ellipse cx="-8" cy="-60" rx="5" ry="10" transform="rotate(-22 -8 -60)"/>
+        <ellipse cx="0" cy="-76" rx="5" ry="11"/>
+      </g>
+    </g>
+  </defs>
+
+  <rect width="480" height="360" fill="url(#bg13)"/>
+
+  <!-- radiating burst -->
+  <g stroke="#e8b74a" stroke-width="1.2" opacity=".14">
+    <path d="M240 176 L40 16"/><path d="M240 176 L440 16"/><path d="M240 176 L16 116"/>
+    <path d="M240 176 L464 116"/><path d="M240 176 L16 246"/><path d="M240 176 L464 246"/>
+    <path d="M240 176 L124 12"/><path d="M240 176 L356 12"/>
+  </g>
+  <circle cx="240" cy="176" r="116" fill="none" stroke="#e8b74a" stroke-width="1.4" opacity=".3"/>
+  <circle cx="240" cy="176" r="130" fill="none" stroke="#e8b74a" stroke-width="1" opacity=".16"/>
+
+  <!-- barley flanking the bottle -->
+  <g opacity=".55">
+    <g transform="translate(100 300) rotate(-14) scale(1.15)"><use href="#barley13"/></g>
+    <g transform="translate(380 300) rotate(14) scale(1.15)"><use href="#barley13"/></g>
+  </g>
+
+  <!-- bottle -->
+  <g transform="translate(240 190) scale(1.25)">
+    <path d="M-13 -132 h26 v10 h5 v20 c0 16 12 22 12 44 v92 c0 12 -8 20 -20 20 h-20 c-12 0 -20 -8 -20 -20 v-92 c0 -22 12 -28 12 -44 v-20 h5 z"
+          fill="url(#glass13)" stroke="#e8b74a" stroke-width="2.2" stroke-linejoin="round"/>
+    <!-- crown cap -->
+    <path d="M-15 -142 h30 v12 h-30 z" fill="#e8b74a" stroke="#8c5a12" stroke-width="1.6"/>
+    <!-- neck band -->
+    <rect x="-19" y="-100" width="38" height="15" fill="#161210" stroke="#e8b74a" stroke-width="1.5"/>
+    <!-- body label -->
+    <rect x="-31" y="-38" width="62" height="66" rx="3" fill="#161210" stroke="#e8b74a" stroke-width="2"/>
+    <ellipse cx="0" cy="-14" rx="19" ry="15" fill="#f4ecd9"/>
+    <path d="M-11 -10 c0 -13 5 -19 11 -19 c6 0 11 6 11 19 z" fill="#8a1c1c"/>
+    <path d="M-19 -17 h38" stroke="#8a1c1c" stroke-width="3.4"/>
+    <rect x="-27" y="6" width="54" height="12" fill="#e8b74a"/>
+    <path d="M-24 24 h48" stroke="#e8b74a" stroke-width="1.5" opacity=".55"/>
+    <!-- highlight -->
+    <path d="M-6 -114 v44 c0 18 -8 22 -8 40 v74" fill="none" stroke="#ffe0a3"
+          stroke-width="3" opacity=".32" stroke-linecap="round"/>
+  </g>
+
+  <!-- baseline -->
+  <path d="M56 300 H424" stroke="#e8b74a" stroke-width="2" opacity=".5"/>
+  <g stroke="#e8b74a" stroke-width="1" opacity=".14">
+    <path d="M0 316 H480"/><path d="M0 330 H480"/>
+  </g>
+
+  <text x="240" y="344" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="15" letter-spacing="8" fill="#e8b74a" opacity=".8">6% ALC/VOL</text>
+</svg>

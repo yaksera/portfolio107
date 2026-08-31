@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300" role="img" aria-label="Gorkha Strong seal">
+  <defs>
+    <path id="arc-top" d="M150 150 m-116 0 a116 116 0 0 1 232 0" fill="none"/>
+    <path id="arc-bottom" d="M150 150 m116 0 a116 116 0 0 1 -232 0" fill="none"/>
+    <g id="khukuri">
+      <!-- blade -->
+      <path d="M26 76 C34 52 58 20 84 12 L88 16 C74 44 56 72 32 84 Z"
+            fill="#e8b74a" stroke="#8c5a12" stroke-width="1.6" stroke-linejoin="round"/>
+      <!-- fuller line -->
+      <path d="M36 72 C46 52 64 30 80 20" fill="none" stroke="#8c5a12" stroke-width="1.4" opacity=".55"/>
+      <!-- bolster -->
+      <path d="M20 88 L32 74 L38 80 L26 94 Z" fill="#8c5a12"/>
+      <!-- handle -->
+      <path d="M6 106 L24 86 L32 94 L14 114 Z" fill="#c98a2b" stroke="#6b3f0a" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M12 100 L20 108 M18 94 L26 102" stroke="#6b3f0a" stroke-width="1.4" opacity=".8"/>
+      <!-- pommel -->
+      <circle cx="9" cy="112" r="5.5" fill="#c98a2b" stroke="#6b3f0a" stroke-width="1.6"/>
+    </g>
+  </defs>
+
+  <!-- rings -->
+  <circle cx="150" cy="150" r="143" fill="none" stroke="#e8b74a" stroke-width="3"/>
+  <circle cx="150" cy="150" r="134" fill="none" stroke="#e8b74a" stroke-width="1.4" opacity=".75"/>
+  <circle cx="150" cy="150" r="99" fill="none" stroke="#e8b74a" stroke-width="1.4" opacity=".55"/>
+
+  <!-- rope notches around the inner ring -->
+  <g stroke="#e8b74a" stroke-width="2.4" opacity=".5" stroke-linecap="round">
+    <path d="M150 44 v9"/><path d="M203 58 l-4.5 7.8"/><path d="M242 97 l-7.8 4.5"/>
+    <path d="M256 150 h-9"/><path d="M242 203 l-7.8 -4.5"/><path d="M203 242 l-4.5 -7.8"/>
+    <path d="M150 256 v-9"/><path d="M97 242 l4.5 -7.8"/><path d="M58 203 l7.8 -4.5"/>
+    <path d="M44 150 h9"/><path d="M58 97 l7.8 4.5"/><path d="M97 58 l4.5 7.8"/>
+  </g>
+
+  <!-- arc lettering -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="bold"
+        letter-spacing="7" fill="#e8b74a">
+    <textPath href="#arc-top" startOffset="50%" text-anchor="middle">GORKHA STRONG</textPath>
+  </text>
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="17"
+        letter-spacing="6" fill="#e8b74a" opacity=".9">
+    <textPath href="#arc-bottom" startOffset="50%" text-anchor="middle">EST. 1989 &#183; NEPAL</textPath>
+  </text>
+
+  <!-- crossed khukuris -->
+  <g transform="translate(150 132)">
+    <g transform="translate(-6 -46) rotate(-4) scale(0.72)"><use href="#khukuri"/></g>
+    <g transform="translate(6 -46) rotate(4) scale(-0.72 0.72)"><use href="#khukuri"/></g>
+  </g>
+
+  <!-- banner -->
+  <path d="M74 178 h152 l-13 22 h-126 z" fill="#1a1512" stroke="#e8b74a" stroke-width="2"/>
+  <text x="150" y="194" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="15" font-weight="bold" letter-spacing="5" fill="#e8b74a">6% ALC/VOL</text>
+
+  <text x="150" y="222" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="12" letter-spacing="3.5" fill="#e8b74a" opacity=".78">DEDICATED TO THE BRAVE</text>
+</svg>

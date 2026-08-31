@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img" aria-label="The brewery at Mukundapur beneath the Himalaya, 1989">
+  <defs>
+    <linearGradient id="sky89" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#231a10"/>
+      <stop offset="0.55" stop-color="#3a2611"/>
+      <stop offset="1" stop-color="#170f09"/>
+    </linearGradient>
+    <linearGradient id="peak89" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8b74a" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#e8b74a" stop-opacity=".07"/>
+    </linearGradient>
+    <clipPath id="frame89"><rect width="480" height="360"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame89)">
+    <rect width="480" height="360" fill="url(#sky89)"/>
+
+    <!-- sun disc -->
+    <circle cx="356" cy="112" r="44" fill="#e8b74a" opacity=".16"/>
+    <circle cx="356" cy="112" r="44" fill="none" stroke="#e8b74a" stroke-width="1.2" opacity=".45"/>
+
+    <!-- engraved sky rays -->
+    <g stroke="#e8b74a" stroke-width="1" opacity=".13">
+      <path d="M0 46 H480"/><path d="M0 66 H480"/><path d="M0 86 H480"/>
+      <path d="M0 106 H480"/><path d="M0 126 H480"/>
+    </g>
+
+    <!-- far range -->
+    <path d="M-10 214 L58 148 L102 186 L164 116 L226 190 L286 136 L344 196 L404 150 L490 212 V370 H-10 Z"
+          fill="url(#peak89)" stroke="#e8b74a" stroke-width="1.6" stroke-opacity=".6"/>
+    <!-- snow caps -->
+    <g fill="#e8b74a" opacity=".38">
+      <path d="M164 116 L186 142 L174 138 L164 146 L154 136 L142 142 Z"/>
+      <path d="M286 136 L306 162 L294 157 L286 165 L276 155 L266 161 Z"/>
+      <path d="M58 148 L76 170 L66 166 L58 173 L50 165 L40 170 Z"/>
+    </g>
+
+    <!-- near ridge -->
+    <path d="M-10 262 L74 216 L150 254 L232 210 L318 258 L396 222 L490 264 V370 H-10 Z"
+          fill="#120c07" stroke="#e8b74a" stroke-width="1.4" stroke-opacity=".45"/>
+
+    <!-- brewery -->
+    <g stroke="#e8b74a" stroke-width="2" fill="#1b120a" stroke-linejoin="round">
+      <rect x="150" y="268" width="128" height="62"/>
+      <path d="M150 268 L214 238 L278 268"/>
+      <rect x="284" y="286" width="62" height="44"/>
+      <path d="M284 286 L315 266 L346 286"/>
+      <rect x="196" y="196" width="24" height="76"/>
+      <rect x="192" y="190" width="32" height="10"/>
+    </g>
+    <!-- windows -->
+    <g fill="#e8b74a" opacity=".72">
+      <rect x="166" y="286" width="16" height="20"/>
+      <rect x="196" y="286" width="16" height="20"/>
+      <rect x="226" y="286" width="16" height="20"/>
+      <rect x="298" y="298" width="14" height="18"/>
+      <rect x="320" y="298" width="14" height="18"/>
+    </g>
+    <!-- smoke -->
+    <g fill="none" stroke="#e8b74a" stroke-width="1.6" opacity=".4">
+      <path d="M208 188 C198 174 220 168 210 152 C202 138 222 132 214 118"/>
+    </g>
+
+    <!-- barrels -->
+    <g stroke="#e8b74a" stroke-width="1.8" fill="#1b120a">
+      <rect x="98" y="300" width="34" height="30" rx="4"/>
+      <path d="M98 310 H132 M98 320 H132"/>
+      <rect x="366" y="304" width="30" height="26" rx="4"/>
+      <path d="M366 313 H396 M366 322 H396"/>
+    </g>
+
+    <!-- ground -->
+    <path d="M-10 330 H490" stroke="#e8b74a" stroke-width="2" opacity=".55"/>
+    <g stroke="#e8b74a" stroke-width="1" opacity=".18">
+      <path d="M0 342 H480"/><path d="M0 352 H480"/>
+    </g>
+
+    <!-- grain texture -->
+    <g fill="#e8b74a" opacity=".08">
+      <circle cx="60" cy="80" r="1.6"/><circle cx="120" cy="60" r="1.2"/><circle cx="420" cy="70" r="1.4"/>
+      <circle cx="440" cy="180" r="1.2"/><circle cx="30" cy="300" r="1.4"/><circle cx="450" cy="330" r="1.2"/>
+    </g>
+  </g>
+</svg>

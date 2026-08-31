@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Gorkha Strong — a 6% ALC/VOL malt liquor lager brewed in Nepal. Dedicated to the brave." />
+  <title>Gorkha Strong | Dedicated to the Brave</title>
+
+  <!-- Google Fonts: Inter (latin) + Mukta (devanagari) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mukta:wght@400;600;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="smooth-wrapper">
+
+  <!-- ================== HEADER ================== -->
+  <header style="--border-width:0;">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <span class="logo-np">गोर्खा</span>
+        <span class="logo-en">Strong</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="#">Home</a>
+        <a href="#brew">The Brew</a>
+        <a href="#heritage">Heritage</a>
+        <a href="#find">Where to Find</a>
+      </nav>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger" onclick="toggleMobileNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="#">Home</a>
+      <a href="#brew">The Brew</a>
+      <a href="#heritage">Heritage</a>
+      <a href="#find">Where to Find</a>
+    </div>
+  </header>
+
+  <!-- ================== MAIN CONTENT ================== -->
+  <main id="smooth-content">
+
+    <!-- Hero Bottle Overlay Wrapper -->
+    <div class="hero-bottle-wrapper">
+      <img src="./gorkha-strong.png" alt="Gorkha Strong 650ml bottle"
+        class="hero-bottle" />
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero vintage-hero">
+      <div class="hero-content">
+        <!-- Decorative Stamp -->
+        <span class="hero-stamp-slot">
+          <img src="./stamp.svg" alt="Gorkha Strong seal — Est. 1989, Nepal"
+            class="hero-stamp">
+        </span>
+
+        <!-- Main Heading -->
+        <h1>
+          <span class="line">Gorkha</span>
+          <span class="line highlight">Strong</span>
+        </h1>
+
+        <!-- Sub-line -->
+        <p class="hero-tagline">
+          <span class="np">साहसीको लागि समर्पित</span>
+          <span class="sep">&#183;</span>
+          <span>Dedicated to the Brave</span>
+        </p>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="scroll-cue"><span>Scroll</span><i></i></div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section-intro" id="brew">
+      <div class="intro-grid">
+
+        <!-- Left Side: Headings and Description -->
+        <div class="intro-left">
+          <p class="small-title">The Strong Line</p>
+          <h2 class="main-heading">Brewed for the Brave</h2>
+          <p class="description">
+            Nepal's boldest lager, brewed at Mukundapur in Nawalparasi and
+            carrying the name the hills gave the Gorkhas. Six percent,
+            full-bodied, deep amber — smooth on the way in, strong all the way
+            through.
+          </p>
+
+          <!-- Key Numbers -->
+          <div class="stat-row">
+            <div class="stat">
+              <span class="stat-value">6%</span>
+              <span class="stat-label">Alc / Vol</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">650</span>
+              <span class="stat-label">ml Bottle</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">1989</span>
+              <span class="stat-label">Est. Nepal</span>
+            </div>
+          </div>
+
+          <a href="#find" class="cta-box">Find a Stockist</a>
+        </div>
+
+        <!-- Right Side: Ingredients List -->
+        <div class="intro-right">
+          <div class="ingredients-log">
+            <h3 class="ingredients-title">Brewed With</h3>
+
+            <!-- Each Ingredient -->
+            <div class="ingredient-item">
+              <div class="ingredient-qty">650ml</div>
+              <div class="ingredient-text">
+                <strong>Himalayan Water</strong>
+                <p>Drawn from deep aquifers below the Chure hills.</p>
+              </div>
+            </div>
+
+            <div class="ingredient-item">
+              <div class="ingredient-qty">2-Row</div>
+              <div class="ingredient-text">
+                <strong>Malted Barley</strong>
+                <p>Kilned for the deep amber body the strong is known for.</p>
+              </div>
+            </div>
+
+            <div class="ingredient-item">
+              <div class="ingredient-qty">Finest</div>
+              <div class="ingredient-text">
+                <strong>Aroma Hops</strong>
+                <p>Measured late in the boil — bitterness without the bite.</p>
+              </div>
+            </div>
+
+            <div class="ingredient-item">
+              <div class="ingredient-qty">21 Days</div>
+              <div class="ingredient-text">
+                <strong>Cold Maturation</strong>
+                <p>Lagered slow and cold until the finish runs clean.</p>
+              </div>
+            </div>
+
+            <div class="ingredient-item">
+              <div class="ingredient-qty">6%</div>
+              <div class="ingredient-text">
+                <strong>Alc / Vol</strong>
+                <p>A malt liquor lager with the strength to match the name.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Band -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="np">साहसीको लागि समर्पित</span><i>&#10022;</i>
+        <span>Dedicated to the Brave</span><i>&#10022;</i>
+        <span>6% Alc / Vol</span><i>&#10022;</i>
+        <span>Premium Nepali Strong Beer</span><i>&#10022;</i>
+        <span class="np">साहसीको लागि समर्पित</span><i>&#10022;</i>
+        <span>Dedicated to the Brave</span><i>&#10022;</i>
+        <span>6% Alc / Vol</span><i>&#10022;</i>
+        <span>Premium Nepali Strong Beer</span><i>&#10022;</i>
+      </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="heritage">
+      <h2 class="timeline-main-title">Our Heritage</h2>
+
+      <!-- First Timeline Entry -->
+      <div class="timeline-entry entry-1">
+        <!-- Left Column: Date + Image -->
+        <div class="timeline-left">
+          <div class="timeline-date">1989</div>
+          <img src="./heritage-1989.svg" alt="The brewery at Mukundapur"
+            class="timeline-img" />
+        </div>
+
+        <!-- Right Column: Story -->
+        <div class="timeline-right">
+          <h3 class="timeline-title">The Brewery at Mukundapur</h3>
+          <p class="timeline-description">
+            Gorkha Brewery is founded in Nawalparasi as a joint venture between
+            the Khetan Group and Carlsberg — the first brewhouse of its scale in
+            the country, and still one of the most advanced in South Asia.
+          </p>
+        </div>
+      </div>
+
+      <!-- Second Timeline Entry -->
+      <div class="timeline-entry entry-2">
+        <div class="timeline-left">
+          <div class="timeline-date">2007</div>
+          <img src="./heritage-2007.svg" alt="The Gorkha emblem"
+            class="timeline-img" />
+        </div>
+
+        <div class="timeline-right">
+          <h3 class="timeline-title">गोर्खा Takes the Country</h3>
+          <p class="timeline-description">
+            The Gorkha brand debuts with the soldier's hat on the label and a
+            promise on the neck: dedicated to the brave. Within a few years it
+            is Nepal's number one beer by both volume and value.
+          </p>
+        </div>
+      </div>
+
+      <!-- Third Timeline Entry -->
+      <div class="timeline-entry entry-3">
+        <div class="timeline-left">
+          <div class="timeline-date">2013</div>
+          <img src="./heritage-2013.svg" alt="The Gorkha Strong bottle"
+            class="timeline-img" />
+        </div>
+
+        <div class="timeline-right">
+          <h3 class="timeline-title">Strong Arrives</h3>
+          <p class="timeline-description">
+            Gorkha Strong lands at 6% — same brewhouse, same water, more of
+            everything else. Black band, gold ring, 650ml. Made for the end of a
+            long day and the people who earn one.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Section -->
+    <section class="outro" id="find">
+      <div class="outro-inner">
+        <p class="small-title">Where to Find</p>
+        <h2 class="outro-heading">
+          <span class="np">साहसीको लागि समर्पित</span>
+        </h2>
+        <p class="outro-sub">Dedicated to the Brave</p>
+        <p class="description">
+          Gorkha Strong is stocked across Nepal in 650ml bottles and 500ml cans.
+          Ask for it cold.
+        </p>
+        <a href="#" class="cta-box">Find a Stockist</a>
+      </div>
+    </section>
+
+    <!-- Social Sidebar (Fixed vertical navigation) -->
+    <aside class="social-sidebar" style="--border-height:0;">
+      <nav>
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5Zm.5 1.5h7.5a4.25 4.25 0 0 1 4.25 4.25v7.5a4.25 4.25 0 0 1-4.25 4.25h-7.5a4.25 4.25 0 0 1-4.25-4.25v-7.5a4.25 4.25 0 0 1 4.25-4.25Zm8.5 2.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm-5.25 1.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.63A22 22 0 0 0 14.3 4.5c-2.4 0-4.05 1.47-4.05 4.16v2.24H7.5V14h2.75v8h3.25Z" />
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.27 5 12 5 12 5s-6.27 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26.1 26.1 0 0 0 2 12a26.1 26.1 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.73 19 12 19 12 19s6.27 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26.1 26.1 0 0 0 22 12a26.1 26.1 0 0 0-.4-4.8ZM10 15.2V8.8l5.2 3.2L10 15.2Z" />
+          </svg>
+        </a>
+      </nav>
+    </aside>
+  </main>
+
+  <!-- ================== FOOTER ================== -->
+  <footer>
+    <div class="footer-inner">
+      <!-- Logo -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-np">गोर्खा</span>
+          <span class="logo-en">Strong</span>
+        </div>
+        <p class="footer-note">
+          Premium Nepali strong beer. 6% ALC/VOL, 650ml.<br />
+          Brewed at Mukundapur, Nawalparasi.
+        </p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-links">
+        <span class="footer-heading">Brand</span>
+        <a href="#brew">The Brew</a>
+        <a href="#heritage">Heritage</a>
+        <a href="#">Responsible Drinking</a>
+      </div>
+
+      <!-- Contact and Social Links -->
+      <div class="footer-contact">
+        <span class="footer-heading">Connect</span>
+        <a href="#">hello@gorkhastrong.com.np</a>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Not for sale to persons under 18. Please drink responsibly.</p>
+      <p class="disclaimer">
+        Concept redesign built for portfolio purposes. Not affiliated with or
+        endorsed by Gorkha Brewery Pvt. Ltd.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ================== JAVASCRIPT ================== -->
+
+  <!-- GSAP Core Library -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+  <!-- GSAP ScrollTrigger Plugin -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Custom Main Script -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>

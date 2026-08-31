@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img" aria-label="The Gorkha emblem, 2007">
+  <defs>
+    <linearGradient id="bg07" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a0f0f"/>
+      <stop offset="1" stop-color="#140908"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="360" fill="url(#bg07)"/>
+
+  <!-- engraved backdrop rules -->
+  <g stroke="#e8b74a" stroke-width="1" opacity=".1">
+    <path d="M0 34 H480"/><path d="M0 62 H480"/><path d="M0 90 H480"/>
+    <path d="M0 270 H480"/><path d="M0 298 H480"/><path d="M0 326 H480"/>
+  </g>
+
+  <!-- medallion -->
+  <circle cx="240" cy="166" r="122" fill="#8a1c1c" stroke="#e8b74a" stroke-width="3"/>
+  <circle cx="240" cy="166" r="110" fill="none" stroke="#f4ecd9" stroke-width="1.6" opacity=".45"/>
+
+  <!-- portrait: cream silhouette on the maroon field so it reads at a glance -->
+  <g transform="translate(240 186)" fill="#f4ecd9">
+    <!-- shoulders -->
+    <path d="M-78 88 C-70 44 -38 26 0 26 C38 26 70 44 78 88 Z"/>
+    <!-- neck -->
+    <rect x="-14" y="6" width="28" height="26"/>
+    <!-- face -->
+    <path d="M-26 -44 C-26 -16 -20 12 0 26 C20 12 26 -16 26 -44 Z"/>
+    <!-- hat crown -->
+    <path d="M-30 -50 C-30 -92 -14 -108 0 -108 C14 -108 30 -92 30 -50 Z"/>
+    <!-- hat brim -->
+    <path d="M-96 -44 C-76 -70 -40 -56 0 -56 C40 -56 76 -70 96 -44 C76 -30 40 -37 0 -37 C-40 -37 -76 -30 -96 -44 Z"/>
+  </g>
+
+  <!-- brim shadow + hat band, drawn back in maroon for definition -->
+  <g transform="translate(240 186)" fill="none" stroke="#8a1c1c" stroke-width="3.5" stroke-linecap="round">
+    <path d="M-30 -57 C-14 -50 14 -50 30 -57"/>
+    <path d="M-64 -46 C-34 -38 34 -38 64 -46" stroke-width="2" opacity=".55"/>
+  </g>
+
+  <!-- crossed khukuri blades under the medallion -->
+  <g transform="translate(240 300)">
+    <g fill="#e8b74a" stroke="#3a1a06" stroke-width="1.4" stroke-linejoin="round">
+      <path d="M-16 8 C-30 -8 -58 -26 -86 -32 L-90 -25 C-66 -14 -40 4 -24 18 Z"/>
+      <path d="M16 8 C30 -8 58 -26 86 -32 L90 -25 C66 -14 40 4 24 18 Z"/>
+    </g>
+    <g fill="#c98a2b" stroke="#3a1a06" stroke-width="1.4" stroke-linejoin="round">
+      <path d="M-24 18 l-14 12 l12 12 l14 -12 z"/>
+      <path d="M24 18 l14 12 l-12 12 l-14 -12 z"/>
+    </g>
+  </g>
+
+  <!-- corner rules -->
+  <g stroke="#e8b74a" stroke-width="2" opacity=".5" fill="none">
+    <path d="M18 18 h40 M18 18 v40"/>
+    <path d="M462 18 h-40 M462 18 v40"/>
+    <path d="M18 342 h40 M18 342 v-40"/>
+    <path d="M462 342 h-40 M462 342 v-40"/>
+  </g>
+</svg>
